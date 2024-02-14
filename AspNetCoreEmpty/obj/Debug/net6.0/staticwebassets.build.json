@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cQ97kzfT67+v7llM3GrcaBkfzc91qB/RZ6kq9xLk8+I=",
+  "Source": "AspNetCoreEmpty",
+  "BasePath": "_content/AspNetCoreEmpty",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
