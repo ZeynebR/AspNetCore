@@ -6,14 +6,20 @@ namespace AspNetCoreEmpty.Models.Contexts
     public class DataContext :  DbContext
 
     {
-
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DataContext(DbContextOptions options):base(options)
         {
-            base.OnConfiguring(optionsBuilder);
-            string cString = "Server=LAPTOP-6I4SKCDS;Database=P237;Trusted_Connection=True;MultipleActiveResultSets=true;";
-            optionsBuilder.UseSqlServer(cString);   
+            
         }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    base.OnConfiguring(optionsBuilder);
+        //    string cString = "Server=LAPTOP-6I4SKCDS;Database=P237;User Id=sa;Password=query;MultipleActiveResultSets=true;";
+        //    optionsBuilder.UseSqlServer(cString);   
+        //}
 
-        public DbSet<Size> Sizes { get; set; }  
+        public DbSet<Size> Sizes { get; set; }
+        public DbSet<Color> Colors { get; set; }
+        public DbSet<Brand> Brands { get; set; }
+
     }
 }

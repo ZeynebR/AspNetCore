@@ -1,10 +1,19 @@
+using AspNetCoreEmpty.Models.Contexts;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 
 builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
-//app.MapDefaultControllerRoute();    
+
+builder.Services.AddDbContext<DataContext>(cfg =>
+{
+cfg.UseSqlServer(builder.Configuration.GetConnectionString("cString"));
+});
+//app.MapDefaultControllerRoute();
 
 app.MapControllerRoute(
     name: "default",
